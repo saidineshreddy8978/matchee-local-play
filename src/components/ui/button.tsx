@@ -9,20 +9,25 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-field",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-team",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        hero: "bg-gradient-hero text-primary-foreground hover:shadow-glow transform hover:scale-105 transition-all duration-300 shadow-lg",
+        team: "bg-team-blue text-white hover:bg-team-blue/90 shadow-team transform hover:scale-105 transition-all duration-200",
+        challenge: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-glow animate-bounce-gentle hover:animate-none",
+        victory: "bg-victory-gold text-foreground hover:bg-victory-gold/90 shadow-glow font-bold"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
+        xl: "h-14 rounded-lg px-12 text-lg",
         icon: "h-10 w-10",
       },
     },
