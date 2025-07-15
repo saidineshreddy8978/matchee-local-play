@@ -11,7 +11,8 @@ import {
   MessageCircle,
   Calendar,
   Target,
-  Zap
+  Zap,
+  Clock // ✅ Add this
 } from "lucide-react";
 
 interface TeamCardProps {
