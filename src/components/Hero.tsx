@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Calendar, MessageCircle, Zap, Trophy, Target } from "lucide-react";
 import heroImage from "@/assets/hero-sports-field.jpg";
@@ -54,24 +55,28 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              variant="hero" 
-              size="xl" 
-              className="animate-scale-in hover:scale-110 hover:shadow-glow transition-all duration-300 group"
-              style={{ animationDelay: '0.6s' }}
-            >
-              <Trophy className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Create Your Team
-            </Button>
-            <Button 
-              variant="secondary" 
-              size="xl" 
-              className="animate-scale-in hover:scale-110 hover:shadow-lg transition-all duration-300 group"
-              style={{ animationDelay: '0.8s' }}
-            >
-              <Target className="w-5 h-5 mr-2 group-hover:animate-spin" />
-              Find Opponents
-            </Button>
+            <Link to="/signup">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="animate-scale-in hover:scale-110 hover:shadow-glow transition-all duration-300 group"
+                style={{ animationDelay: '0.6s' }}
+              >
+                <Trophy className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                Join Matchee
+              </Button>
+            </Link>
+            <Link to="/#teams">
+              <Button 
+                variant="secondary" 
+                size="xl" 
+                className="animate-scale-in hover:scale-110 hover:shadow-lg transition-all duration-300 group"
+                style={{ animationDelay: '0.8s' }}
+              >
+                <Target className="w-5 h-5 mr-2 group-hover:animate-spin" />
+                Find Teams
+              </Button>
+            </Link>
           </div>
 
           {/* Enhanced Key Features */}
